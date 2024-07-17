@@ -108,16 +108,7 @@ class Minesweeper(): #  Needs tidying up
                 print(self.gameboard[x,y])
                 print(self.board[x,y])
             
-                                
-    def get_state_action(self):
-        state = self.gameboard[1:self.boardsize+1, 1:self.boardsize+1].copy()
-        actions = []
-        for x in range(1, self.boardsize+1):
-            for y in range(1, self.boardsize+1):
-                if self.gameboard[x, y] == 100:
-                    actions.append((x-1, y-1))  # Adjust coordinates to 0-based indexing
-        return state, actions
-    
+                                   
 
 def playgame():
     correct_response = True
